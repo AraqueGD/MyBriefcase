@@ -1,0 +1,29 @@
+{
+  "name": "my_briefcase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AraqueGD/MyBriefcase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AraqueGD/MyBriefcase/issues"
+  },
+  "homepage": "https://github.com/AraqueGD/MyBriefcase#readme",
+  "dependencies": {
+    "bootswatch": "^4.6.0",
+    "next": "^10.1.2",
+    "nprogress": "^0.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {}
+}
