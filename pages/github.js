@@ -1,7 +1,13 @@
 import Layout from "../components/Layout";
+import  Error  from "./_error";
 
 export default function github(props) {
-  const { user } = props;
+  const { user, statusCode } = props;
+
+  if (statusCode) {
+    return  <Error statusCode={statusCode} />
+  }
+
   return (
     <Layout>
       <div className="row">
@@ -9,7 +15,7 @@ export default function github(props) {
           <div className="card card-body text-center">
             <h1>{user.name}</h1>
             <img src={user.avatar_url} alt="avatar" />
-            <p>{user.bio}</p>
+            <p className="pt-2" >{user.bio}</p>
             <a
               href={user.html_url}
               target="_blank"
@@ -28,10 +34,12 @@ export const getServerSideProps = async () => {
   const res = await fetch("https://api.github.com/users/AraqueGD");
   const data = await res.json();
 
-  console.log(data);
+  const statusCode = res.status > 200 ? res.status : false;
+
   return {
     props: {
       user: data,
+      statusCode
     },
   };
 };

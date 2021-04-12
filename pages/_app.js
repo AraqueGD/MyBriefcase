@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>My Portfolio</title>
+        <title>My Portfolio - Camilo Araque</title>
         <meta name="description" content="Camilo Araque Portfolio" />
         <link
           rel="stylesheet"

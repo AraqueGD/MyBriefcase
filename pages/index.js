@@ -21,12 +21,11 @@ export default function index() {
                 <h1>Camilo Araque Caro</h1>
                 <h3>Full Stack Developer</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-                  repellendus laboriosam corrupti voluptas excepturi ipsam quis
-                  a maxime perspiciatis rerum error quaerat aut consectetur,
-                  cupiditate numquam ullam est tempore! Praesentium.
+                I am a person who loves Programming and web development, responsible in constant learning, I always like to be up to date with the new technologies that are emerging, I like to share my knowledge, and always contribute a new idea or undertaking in each project! , Looking for Work Experience opportunities.
                 </p>
-                <a href="">Hire Me</a>
+                <Link href="/contact">
+                  <a>Hire Me</a>
+                </Link>
               </div>
             </div>
           </div>
@@ -63,12 +62,12 @@ export default function index() {
               <h1>Study Experience</h1>
 
               <ul>
-                {experiences.map(({ title, description, from, to }, key) => (
+                {experiences.map(({ title, description, from, to, current }, key) => (
                   <li key={key}>
                     <h3>{title}</h3>
-                    <h5>
-                      {from}-{to}
-                    </h5>
+                    {
+                      current ? <h3>{current}</h3> : <h3>{from}-{to}</h3>
+                    }
                     <p>{description}</p>
                   </li>
                 ))}
@@ -91,11 +90,13 @@ export default function index() {
                 <div className="col-md-4 p-2" key={key}>
                   <div className="card h-100">
                     <div className="overflow">
-                      <img
-                        src={`/${image}`}
-                        alt="proyect1"
-                        className="card-img-top"
-                      />
+                      <a href={repository} target="_blank">
+                        <img
+                          src={`/${image}`}
+                          alt="proyects"
+                          className="card-img-top"
+                        />
+                      </a>
                     </div>
                     <div className="card-body">
                       <h3>{name}</h3>
@@ -110,7 +111,7 @@ export default function index() {
             </div>
 
             <div className="text-center mt-4">
-              <Link href="/portfolio">
+              <Link href="/">
                 <a className="btn btn-outline-light">More Poryects</a>
               </Link>
             </div>
