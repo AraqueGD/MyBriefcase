@@ -40,6 +40,10 @@ export const skills = [
     percentage: 50,
   },
   {
+    skill: "Git",
+    percentage: 50,
+  },
+  {
     skill: "Python",
     percentage: 50,
   },
@@ -77,17 +81,22 @@ export const experiences = [
   {
     title: "Holberton School",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur et explicabo voluptates alias omnis beatae atque commodi, ullam quidem laborum laboriosam itaque enim at praesentium temporibus, natus eveniet mollitia a?",
+      "In Holberton my way to programming began, it was 2 years of knowledge of the new world of Software 9 months of Fundamentals learning about Virtual Machines, programming logic, Git and Git Hub, MySQL programming languages ​​like C, Python, ORM, Javascript environments like DevOps Then another 9 months in Full Stack Specialization where I went deep and knew in depth HTML, CSS, SASS, Javascript, JQuery, ES6, i18, MySQL Advanced, NoSQL, Unitt Testing Integration.",
     from: "2019",
     to: "2021",
   },
   {
     title: "Chiper",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur et explicabo voluptates alias omnis beatae atque commodi, ullam quidem laborum laboriosam itaque enim at praesentium temporibus, natus eveniet mollitia a?",
+      "In the Year 2020 while towards the Holberton Specialization, I entered a Platzi Business Plan, with a Start-Up called Chiper in which I had to learn various technologies in which they were, React, Express, NodeJS, GraphQL, Jest, Gatsby, NextJS, React Router, WebPack, Citizen competencies and Agile Methodologies such as Scrum, Public Speaking, Project Management, Emotional Intelligence.",
     from: "2020",
     to: "2021",
   },
+  {
+    title: "My Self-Taught Study",
+    description: "Already today on my own account I am learning and deepening my knowledge and creating new Projects for my portfolio, New Technologies that I am Learning are ServerLess and TypeScript.",
+    current: "2021"
+  }
 ];
 export const proyects = [
   {
