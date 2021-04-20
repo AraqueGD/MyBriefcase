@@ -7,6 +7,21 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+var whitelist = [
+  "https://my-briefcase-six.vercel.app",
+  "https://my-briefcase-git-master-araquegd.vercel.app",
+  "https://my-briefcase-araquegd.vercel.app",
+];
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+
 app
   .prepare()
   .then(() => {
@@ -14,8 +29,7 @@ app
     const sendEmail = require("./routes/index");
     server.use(express.urlencoded({ extended: false }));
     server.use(express.json());
-    server.use(cors());
-    server.use("/api", sendEmail);
+    server.use("/api", cors(corsOptions), sendEmail);
 
     server.get("*", (req, res) => {
       return handle(req, res);
