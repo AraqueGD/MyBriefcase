@@ -26,7 +26,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
-    const sendEmail = require("./routes/index");
+    const sendEmail = require("../pages/api/index");
     server.use(express.urlencoded({ extended: false }));
     server.use(express.json());
     server.use("/api", cors(corsOptions), sendEmail);
