@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import { skills, experiences, proyects } from "../profile";
 import Link from "next/link";
+import CarouselSlide from "../components/Carousel";
 
 export default function index() {
   return (
@@ -21,11 +22,22 @@ export default function index() {
                 <h1>Camilo Araque Caro</h1>
                 <h3>Full Stack Developer</h3>
                 <p>
-                I am a person who loves Programming and web development, responsible in constant learning, I always like to be up to date with the new technologies that are emerging, I like to share my knowledge, and always contribute a new idea or undertaking in each project! , Looking for Work Experience opportunities.
+                  I am a person who loves Programming and web development,
+                  responsible in constant learning, I always like to be up to
+                  date with the new technologies that are emerging, I like to
+                  share my knowledge, and always contribute a new idea or
+                  undertaking in each project! , Looking for Work Experience
+                  opportunities.
                 </p>
                 <Link href="/contact">
                   <a>Hire Me</a>
                 </Link>
+
+                <div className="row">
+                  <a href="#portfolio">
+                    <CarouselSlide />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -62,15 +74,21 @@ export default function index() {
               <h1>Study Experience</h1>
 
               <ul>
-                {experiences.map(({ title, description, from, to, current }, key) => (
-                  <li key={key}>
-                    <h3>{title}</h3>
-                    {
-                      current ? <h3>{current}</h3> : <h3>{from}-{to}</h3>
-                    }
-                    <p>{description}</p>
-                  </li>
-                ))}
+                {experiences.map(
+                  ({ title, description, from, to, current }, key) => (
+                    <li key={key}>
+                      <h3>{title}</h3>
+                      {current ? (
+                        <h3>{current}</h3>
+                      ) : (
+                        <h3>
+                          {from}-{to}
+                        </h3>
+                      )}
+                      <p>{description}</p>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           </div>
@@ -78,7 +96,7 @@ export default function index() {
       </div>
 
       {/** PortFolio */}
-      <div className="row">
+      <div className="row" id="portfolio">
         <div className="col-md-12">
           <div className="card card-body bg-dark">
             <div className="row">
