@@ -1,6 +1,7 @@
 const express = require("express");
 const next = require("next");
 require("dotenv").config();
+const cors = require("cors");
 const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
@@ -13,6 +14,7 @@ app
     const sendEmail = require("./routes/index");
     server.use(express.urlencoded({ extended: false }));
     server.use(express.json());
+    server.use(cors());
     server.use("/api", sendEmail);
 
     server.get("*", (req, res) => {
