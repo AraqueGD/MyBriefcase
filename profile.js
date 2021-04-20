@@ -94,9 +94,10 @@ export const experiences = [
   },
   {
     title: "My Self-Taught Study",
-    description: "Already today on my own account I am learning and deepening my knowledge and creating new Projects for my portfolio, New Technologies that I am Learning are ServerLess and TypeScript.",
-    current: "2021"
-  }
+    description:
+      "Already today on my own account I am learning and deepening my knowledge and creating new Projects for my portfolio, New Technologies that I am Learning are ServerLess and TypeScript.",
+    current: "2021",
+  },
 ];
 export const proyects = [
   {

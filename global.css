@@ -1,3 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  min-height: calc(100vh - 231px);
+}
+
 .overflow {
   height: 50%;
   overflow: hidden;
