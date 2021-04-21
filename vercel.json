@@ -1,0 +1,15 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/pages/api/index.js"
+        },
+        {
+            "src": "/sendEmail",
+            "methods": [
+                "POST"
+            ],
+            "dest": "/api/index.js"
+        }
+    ]
+}
