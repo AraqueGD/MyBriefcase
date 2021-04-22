@@ -18,13 +18,15 @@ router.post("/sendEmail", async (req, res) => {
   `;
 
   const oAuth2Client = new google.auth.OAuth2(
-    process.env.CLIENT_ID,
-    process.env.CLIENT_SECRET,
-    process.env.REDIRECT_URI,
-    process.env.REFRESH_TOKEN
+    process.env.NEXT_PUBLIC_CLIENT_ID,
+    process.env.NEXT_PUBLIC_CLIENT_SECRET,
+    process.env.NEXT_PUBLIC_REDIRECT_URI,
+    process.env.NEXT_PUBLIC_REFRESH_TOKEN
   );
 
-  oAuth2Client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
+  oAuth2Client.setCredentials({
+    refresh_token: process.env.NEXT_PUBLIC_REFRESH_TOKEN,
+  });
 
   const accessToken = await oAuth2Client.getAccessToken();
   const transporter = nodemailer.createTransport({
@@ -32,10 +34,10 @@ router.post("/sendEmail", async (req, res) => {
     port: 465,
     auth: {
       type: "OAuth2",
-      user: process.env.EMAIL,
-      clientId: process.env.CLIENT_ID,
-      clientSecret: process.env.CLIENT_SECRET,
-      refreshToken: process.env.REFRESH_TOKEN,
+      user: process.env.NEXT_PUBLIC_EMAIL,
+      clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
+      clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+      refreshToken: process.env.NEXT_PUBLIC_REFRESH_TOKEN,
       accessToken: accessToken,
     },
     tls: true,
