@@ -1,12 +1,9 @@
-const express = require("express");
-const router = express.Router();
-
 const { google } = require("googleapis");
 const nodemailer = require("nodemailer");
 
-router.post("/sendEmail", async (req, res) => {
+export default async (req, res) => {
   const { name, email, phone, message } = req.body;
-  contentHTML = `
+  const contentHTML = `
     <h1>User Information</h1>
     <ul>
         <li>Name: ${name}</li>
@@ -40,7 +37,6 @@ router.post("/sendEmail", async (req, res) => {
       refreshToken: process.env.NEXT_PUBLIC_REFRESH_TOKEN,
       accessToken: accessToken,
     },
-    tls: true,
   });
 
   const info = await transporter.sendMail({
@@ -52,7 +48,5 @@ router.post("/sendEmail", async (req, res) => {
 
   console.log("Message Sent", info.messageId);
 
-  res.redirect("/");
-});
-
-module.exports = router;
+  res.status(201).json(req.body);
+};

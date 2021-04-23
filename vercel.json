@@ -2,14 +2,14 @@
     "routes": [
         {
             "src": "/",
-            "dest": "/pages/api/index.js"
+            "dest": "/pages/api/sendEmail.js"
         },
         {
             "src": "/sendEmail",
             "methods": [
                 "POST"
             ],
-            "dest": "/api/index.js"
+            "dest": "/api/sendEmail.js"
         }
     ]
 }
