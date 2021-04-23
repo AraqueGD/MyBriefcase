@@ -24,10 +24,6 @@
     "axios": "^0.21.1",
     "bootswatch": "^4.6.0",
     "cors": "^2.8.5",
-<<<<<<< HEAD
-    "express": "^4.17.1",
-=======
->>>>>>> api_in_next
     "googleapis": "^71.0.0",
     "install": "^0.13.0",
     "next": "^10.1.2",
