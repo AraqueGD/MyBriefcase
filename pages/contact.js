@@ -37,7 +37,7 @@ export default function Contact() {
     <Layout>
       <div className="container p-4">
         <h1 className="text-center">
-          Contact Us <FcAssistant />{" "}
+          Let's talk <FcAssistant />{" "}
         </h1>
         <div className="row">
           <div className="col-md-6 offset-md-3">
