@@ -16,7 +16,7 @@ export default function Contact() {
   const onSubmitForm = async (values) => {
     let config = {
       method: "post",
-      url: `http://localhost:3000/api/sendEmail`,
+      url: `${process.env.NEXT_PUBLIC_API_UR}/api/sendEmail`,
       headers: {
         "Content-Type": "application/json",
       },
