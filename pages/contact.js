@@ -3,6 +3,8 @@ import { FcAssistant } from "react-icons/fc";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const {
@@ -13,7 +15,10 @@ export default function Contact() {
   } = useForm();
   const router = useRouter();
 
-  const onSubmitForm = async (values) => {
+  const notify = () => toast.dark("Success!, Your Email has been Sent!");
+
+  const onSubmitForm = async (values, e) => {
+    e.preventDefault();
     let config = {
       method: "post",
       url: `https://my-briefcase-kappa.vercel.app/api/sendEmail`,
@@ -30,6 +35,7 @@ export default function Contact() {
       }
     } catch (error) {
       console.error(error);
+      toast.error("Internal Error 500");
     }
   };
 
@@ -100,7 +106,10 @@ export default function Contact() {
                   </span>
                 </div>
 
-                <button className="btn btn-primary btn-block">Send</button>
+                <button className="btn btn-primary btn-block" onClick={notify}>
+                  Send
+                </button>
+                <ToastContainer />
               </form>
             </div>
           </div>

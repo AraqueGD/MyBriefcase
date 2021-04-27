@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import { skills, experiences, proyects } from "../profile";
 import Link from "next/link";
 import CarouselSlide from "../components/Carousel";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function index() {
   return (

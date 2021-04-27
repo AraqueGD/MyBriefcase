@@ -22,6 +22,13 @@ export default function CarouselSlide() {
           alt="Third slide"
         />
       </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="typescript_app.png"
+          alt="Fourth slide"
+        />
+      </Carousel.Item>
     </Carousel>
   );
 }

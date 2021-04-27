@@ -134,4 +134,11 @@ export const proyects = [
     image: "smilingschool.png",
     repository: "https://github.com/AraqueGD/holberton-smiling-school.git",
   },
+  {
+    name: "TypeScript App",
+    description:
+      "This App works that you add a Pleasure that you want to acquire, the price and the Type of Currency in which you are going to acquire that pleasure depending on the Currency It will automatically be converted into USD",
+    image: "typescript_app.png",
+    repository: "https://github.com/AraqueGD/TypeScript_App",
+  },
 ];
