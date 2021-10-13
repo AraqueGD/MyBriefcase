@@ -24,8 +24,16 @@ export const skills = [
     percentage: 70,
   },
   {
+    skill: "AngularJS",
+    percentage: 60
+  },
+  {
+   skill: "TypeORM",
+   percentage: 70
+  },
+  {
     skill: "React",
-    percentage: 60,
+    percentage: 50,
   },
   {
     skill: "CSS",
@@ -36,20 +44,16 @@ export const skills = [
     percentage: 50,
   },
   {
-    skill: "Gatsby",
-    percentage: 50,
-  },
-  {
     skill: "Git",
-    percentage: 50,
+    percentage: 80,
   },
   {
     skill: "Python",
-    percentage: 50,
+    percentage: 40,
   },
   {
     skill: "Jest",
-    percentage: 50,
+    percentage: 70,
   },
   {
     skill: "GraphQL",
@@ -64,16 +68,8 @@ export const skills = [
     percentage: 40,
   },
   {
-    skill: "Webpack",
-    percentage: 30,
-  },
-  {
-    skill: "Serverless",
-    percentage: 30,
-  },
-  {
     skill: "Typescript",
-    percentage: 20,
+    percentage: 50,
   },
 ];
 
@@ -142,3 +138,12 @@ export const proyects = [
     repository: "https://github.com/AraqueGD/TypeScript_App",
   },
 ];
+
+export const workExperiences = [
+  {
+    company: "Plataformas Tecnologicas S.A.S",
+    description: "In this company I was supporting the development of an App for Lawyers (Juridigo) where I was commissioned as a FullStack developer using technologies such as Angular, Scss, Flutter, NodeJS, Express, TypeORM, Jest, here where I had personal and professional growth.",
+    from: "June",
+    to: "October"
+  }
+]

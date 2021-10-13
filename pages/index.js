@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import { skills, experiences, proyects } from "../profile";
+import {skills, experiences, proyects, workExperiences} from "../profile";
 import Link from "next/link";
 import CarouselSlide from "../components/Carousel";
 import "react-toastify/dist/ReactToastify.css";
@@ -72,8 +72,25 @@ export default function index() {
         <div className="col-md-8">
           <div className="card bg-light">
             <div className="card-body">
+              <h1>Work Experience</h1>
+              <ul>
+                {workExperiences.map(
+                    ({ company, description, from, to, current }, key) => (
+                        <li key={key}>
+                          <h3>{company}</h3>
+                          {current ? (
+                              <h3>{current}</h3>
+                          ) : (
+                              <h3>
+                                {from}-{to}
+                              </h3>
+                          )}
+                          <p>{description}</p>
+                        </li>
+                    )
+                )}
+              </ul>
               <h1>Study Experience</h1>
-
               <ul>
                 {experiences.map(
                   ({ title, description, from, to, current }, key) => (
